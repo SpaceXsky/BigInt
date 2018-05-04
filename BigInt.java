@@ -248,18 +248,4 @@ public class BigInt {
     public BigInt mod(BigInt a) {
     	return this.subtract(this.divide(a).multiply(a));
     }
-    public static void main(String args[]) {
-    	BigInt a=new BigInt(args[0]);
-    	BigInteger b= new BigInteger(args[0]);
-    	long startTime=System.nanoTime(); 
-    	for(int i=0;i<100000;i++)
-    		a.multiply(a);
-    	long endTime=System.nanoTime(); 
-    	System.out.println(endTime-startTime);
-    	startTime=System.nanoTime(); 
-    	for(int i=0;i<100000;i++)
-    		b.multiply(b);
-    	endTime=System.nanoTime(); 
-    	System.out.println(endTime-startTime);
-	}
 }  
